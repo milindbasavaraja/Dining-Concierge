@@ -6,7 +6,7 @@ url = "https://api.yelp.com/v3/businesses/search"
 
 headers = CaseInsensitiveDict()
 headers["Accept"] = "application/json"
-headers["Authorization"] = "Bearer FGK-M0qUotM8Jemh6qpOnWYkVYiPYKG_q9CIKB4SoPuPseQRgYyNBAABZQ6TX1ZuHJfg0Yh4nYQtHdfFCU0u36ygKp-98iOg71a-LvinxbC2UqLc2rs7HbP5TXFRY3Yx"
+#headers["Authorization"] = "Bearer "
 locations_brooklyn = ['Sunset Park','Fort Greene','Williamsburg','Boerum Hill','Brighton Beach','Clinton Hill','Crown Heights','Gowanus','Park Slope','Dumbo','Cobble Hill','Bushwick','Greenpoint','Bedford-Stuyvesant','Coney Island','Downtown Brooklyn','Red Hook','Bay Ridge','Prospect Heights','Flatbush','Carroll Gardens']
 locations_brooklyn
 locations_manhattan = ['Lower East Side','East Harlem','Washington Heights','SoHo','East Village','Battery Park City','Chinatown','Lower Manhattan','Chelsea','Murray Hill','Upper West Side','Midtown','Governors Island','Times Square','Harlem','West Village','Roosevelt Island','Gramercy','Little Italy','Meatpacking District','Inwood','TriBeCa','Flatiron District','Hell\'s Kitchen','Central Park','Union Square','NoHo','Upper East Side','Greenwich Village','NoLIta','Koreatown']
@@ -25,8 +25,8 @@ for location in locations:
     print(json.dump(response.json(),f))
 
 import boto3
-client = boto3.client('dynamodb',aws_access_key_id='AKIA6EYOWSUQVL6UHO5M', aws_secret_access_key='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', region_name='us-east-1')
-dynamoDb = boto3.resource('dynamodb',aws_access_key_id='AKIA6EYOWSUQVL6UHO5M', aws_secret_access_key='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', region_name='us-east-1')
+client = boto3.client('dynamodb',aws_access_key_id='', aws_secret_access_key='', region_name='us-east-1')
+dynamoDb = boto3.resource('dynamodb',aws_access_key_id='', aws_secret_access_key='', region_name='us-east-1')
 dynamoDb.Table('yelp-restaurants')
 response.json()['businesses'][0]
 data = []

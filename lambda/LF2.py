@@ -28,7 +28,7 @@ def retrieve_restaurants_elastic(cuisine):
     }
     
     headers = { "Content-Type": "application/json" }
-    elastic_response = requests.get(url, auth=("milind","Milind@123"), headers=headers, data=json.dumps(query))
+    elastic_response = requests.get(url, auth=(), headers=headers, data=json.dumps(query))
     log.debug("The response is"+elastic_response.text)
     response = {
         "statusCode": 200,
