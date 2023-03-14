@@ -1,4 +1,4 @@
-# CloudComputingAssignment1
+# Dining-Concierge
 
 Customer Service is a core service for a lot of businesses around the world and it is getting
 disrupted at the moment by Natural Language Processing-powered applications.
